@@ -1,0 +1,74 @@
+@font-face {
+  font-family: Laris Neue;
+  src: url(../../fonts/LarishNeueSemibold.woff);
+}
+
+@font-face {
+  font-family: Work Sans;
+  src: url(../../fonts/WorkSans-Regular.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: clamp(0.5rem, 2.5vw, 1rem);
+}
+
+h2,
+h3 {
+  font-size: clamp(2em, 7vw, 6em);
+  line-height: 1em;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+figure {
+  line-height: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.space {
+  padding: 0 7.5%;
+}
+
+.bg-black {
+  background: #000;
+  color: #fff;
+}
+
+.title {
+  font-family: "Laris Neue";
+  font-weight: bold;
+}
+
+.sub-title {
+  font-size: 1.5em;
+  margin-bottom: 0.6em;
+}
+
+.button {
+  font-size: clamp(0.75em, 1.5vw, 1.25em);
+  border: 1px solid #fff;
+  padding: 1em 2.5em;
+  transition: background-color 0.5s, color 0.5s;
+
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
+}

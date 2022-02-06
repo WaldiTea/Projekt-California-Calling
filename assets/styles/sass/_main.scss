@@ -1,0 +1,159 @@
+@import "_mixins.scss";
+
+main {
+  section:nth-of-type(1) {
+    padding-top: 15%;
+
+    article:first-of-type p,
+    article:last-of-type p:nth-of-type(even) {
+      font-size: clamp(2em, 7.5vw, 6.5em);
+    }
+
+    article:last-of-type {
+      background: url(../../img/map.svg) top right/39% no-repeat;
+      padding: 10% 0 11% 7.5%;
+
+      p:nth-of-type(odd) {
+        font-size: 1.5em;
+      }
+
+      p:nth-of-type(even) {
+        margin-bottom: 1%;
+      }
+    }
+  }
+
+  section:nth-of-type(2) {
+    position: relative;
+    padding: 32% 0 22% 0;
+
+    article {
+      width: 36%;
+      margin: 0 auto;
+
+      p {
+        font-size: 1.1em;
+        line-height: 1.75em;
+      }
+
+      &:first-of-type {
+        margin-bottom: 50%;
+
+        h2 {
+          margin-bottom: 3%;
+        }
+
+        p {
+          width: 95%;
+        }
+      }
+    }
+
+    img {
+      position: absolute;
+      z-index: 1;
+
+      &:first-of-type {
+        @include position(24%, -4%, 7.5%, unset, unset);
+      }
+
+      &:nth-of-type(2) {
+        @include position(20%, 16%, unset, unset, 5%);
+      }
+
+      &:nth-of-type(3) {
+        @include position(21%, 37%, 0, unset, unset);
+      }
+
+      &:nth-of-type(4) {
+        @include position(24%, 48%, unset, unset, 18%);
+      }
+
+      &:nth-of-type(5) {
+        @include position(24%, 58%, 12%, unset, unset);
+      }
+
+      &:nth-of-type(6) {
+        @include position(21%, unset, unset, 17%, 0);
+      }
+
+      &:last-of-type {
+        @include position(31%, unset, 24%, -3%, unset);
+      }
+    }
+  }
+
+  section:nth-of-type(3),
+  section:nth-of-type(4) {
+    @include relativeFlex();
+
+    article:first-of-type {
+      padding-left: 7.5%;
+    }
+
+    article:last-of-type {
+      padding-right: 7.5%;
+
+      p:first-of-type {
+        font-size: 2em;
+      }
+
+      p:last-of-type {
+        font-size: 1.25em;
+        margin-top: 2%;
+      }
+    }
+
+    img {
+      position: absolute;
+      width: 20%;
+    }
+  }
+
+  section:nth-of-type(3) {
+    gap: 18%;
+    padding-bottom: 55%;
+
+    article {
+      padding-top: 12%;
+    }
+
+    img:first-of-type {
+      @include position(56%, unset, unset, -15%, 7.5%);
+    }
+
+    img:last-of-type {
+      @include position(28%, unset, 14%, -7%, unset);
+      z-index: 1;
+    }
+  }
+
+  section:nth-of-type(4) {
+    gap: 21%;
+    overflow: hidden;
+    padding-bottom: 75%;
+
+    article {
+      padding-top: 32%;
+    }
+
+    img:first-of-type {
+      @include position(35%, -8%, -12%, unset, unset);
+      animation: rotate 5s linear infinite;
+    }
+
+    img:nth-of-type(2) {
+      @include position(55%, unset, 7.5%, 6%, unset);
+    }
+
+    img:last-of-type {
+      @include position(28%, unset, unset, 11%, 14%);
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-360deg);
+  }
+}

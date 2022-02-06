@@ -1,0 +1,71 @@
+@import "_mixins.scss";
+
+footer {
+  position: relative;
+  overflow: hidden;
+  padding: 4% 0 4% 0;
+
+  section {
+    p {
+      font-size: 1.1em;
+      margin: 1em 0;
+    }
+
+    .title {
+      width: 50%;
+      font-size: clamp(1em, 3vw, 2.5em);
+      margin-bottom: 5%;
+    }
+
+    & > article {
+      @include flexSpaceBetween();
+      align-items: center;
+      margin-top: 13%;
+
+      article {
+        img {
+          width: 11%;
+          margin-right: 2%;
+        }
+      }
+
+      figure {
+        text-align: end;
+
+        img {
+          width: 18%;
+        }
+      }
+    }
+  }
+
+  .banner {
+    position: absolute;
+    @include position(150%, 0, unset, unset, -12%);
+    background: #fff;
+    color: #000;
+    white-space: nowrap;
+    transform: rotate(48deg);
+
+    p {
+      font-size: clamp(1em, 7vw, 6em);
+      font-weight: bold;
+      animation: floatText 12s linear infinite;
+
+      span {
+        color: #fff;
+        -webkit-text-stroke: 1px #000;
+      }
+    }
+  }
+}
+
+@keyframes floatText {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+}

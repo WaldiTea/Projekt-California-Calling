@@ -1,0 +1,36 @@
+@import "_mixins.scss";
+
+header {
+  text-align: center;
+
+  .line {
+    width: 50%;
+    height: 14em;
+    border-right: 1px solid gray;
+    margin-bottom: 5%;
+  }
+
+  article {
+    margin-bottom: 12%;
+
+    h1 {
+      width: min-content;
+      margin: 2% auto 1% auto;
+      font-size: clamp(2em, 7vw, 6em);
+      line-height: 0.8em;
+
+      span {
+        color: #000;
+        -webkit-text-stroke: 1px #fff;
+      }
+    }
+  }
+
+  ul {
+    @include flexSpaceBetween();
+
+    li a figure {
+      width: 4em;
+    }
+  }
+}

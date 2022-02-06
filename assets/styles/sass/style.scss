@@ -1,0 +1,45 @@
+@import "_global.scss";
+@import "_header.scss";
+@import "_main.scss";
+@import "_footer.scss";
+
+@media (max-width: 1023px) {
+  main section:nth-of-type(2) {
+    article {
+      width: 65%;
+    }
+
+    img:nth-of-type(2) {
+      @include position(20%, 6%, unset, unset, 5%);
+    }
+
+    img:nth-of-type(3) {
+      @include position(21%, 40%, 0, unset, unset);
+    }
+
+    img:nth-of-type(4) {
+      @include position(24%, 43%, unset, unset, 18%);
+    }
+
+    img:nth-of-type(5) {
+      @include position(24%, 54%, 25%, unset, unset);
+    }
+
+    img:nth-of-type(6) {
+      @include position(21%, unset, unset, 2%, 8%);
+    }
+
+    img:last-of-type {
+      @include position(31%, unset, 12%, -3%, unset);
+    }
+  }
+
+  main section:nth-of-type(3),
+  main section:nth-of-type(4) {
+    display: block;
+
+    article:last-of-type {
+      padding: 5% 7.5% 0 7.5%;
+    }
+  }
+}
